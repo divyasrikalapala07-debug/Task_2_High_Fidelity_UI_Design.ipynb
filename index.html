@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>High-Fidelity UI Design</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7ff;
+            color: #222;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #5b5ce2;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 500px;
+            padding: 70px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #5b5ce2;
+        }
+
+        .hero p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 25px;
+            background: #5b5ce2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #4142b8;
+        }
+
+        .hero img {
+            width: 380px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            width: 30%;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta {
+            margin: 50px 8%;
+            padding: 50px;
+            text-align: center;
+            background: #5b5ce2;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .cta h2 {
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 20px;
+        }
+
+        .cta .button {
+            background: white;
+            color: #5b5ce2;
+        }
+
+        /* Footer */
+        footer {
+            background: #171717;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            nav a {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero img {
+                width: 90%;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MyDesign</div>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>Create a <span>Beautiful UI</span></h1>
+
+            <p>
+                A modern high-fidelity user interface designed
+                using attractive colors, typography, buttons,
+                icons and images following UI/UX principles.
+            </p>
+
+            <a href="#features" class="button">
+                Explore Design
+            </a>
+        </div>
+
+        <img
+            src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80"
+            alt="UI Design">
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+
+        <h2>Design Features</h2>
+
+        <p class="subtitle">
+            Simple, modern and user-friendly design
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>Color Palette</h3>
+                <p>
+                    A consistent color palette improves
+                    visual appearance and readability.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔤</div>
+                <h3>Typography</h3>
+                <p>
+                    Clean typography creates a professional
+                    and readable user experience.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Interactive UI</h3>
+                <p>
+                    Buttons, icons and hover effects make
+                    the interface interactive.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="features" id="about">
+
+        <h2>About This Design</h2>
+
+        <p class="subtitle">
+            This high-fidelity UI follows UI/UX principles
+            such as simplicity, consistency, visual hierarchy
+            and responsive design.
+        </p>
+
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <h2>Ready to Get Started?</h2>
+
+        <p>Explore our modern user interface.</p>
+
+        <a href="#" class="button">Get Started</a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Task 2 - High-Fidelity UI Design | 2026
+    </footer>
+
+</body>
+</html>
